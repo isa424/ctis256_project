@@ -17,10 +17,12 @@ class HomeController extends Controller
     }
 
     /**
-     * Find all friends of the authenticated user and fetch their posts from the db and return in the view as an array.
-     * Also each post object should contain properties like number of comments, author user object, number of likes.
-     * The number of posts should be limited to 10. When user clicks on 'Next' it should return the next 10 posts in
-     * chronological order.
+     * Faran
+     * Find all friends of the authenticated user and fetch their posts from the db and return in the view as
+     * an array. Also each post object should contain properties like number of comments, author user object,
+     * number of likes, disklikes. The number of posts should be limited to 10. When user clicks on 'Next' it
+     * should return the next 10 posts in chronological order. User should be able to specify the order the posts
+     * need to be sorted by: Ascending or Descending by creation date.
      */
     public function index()
     {
