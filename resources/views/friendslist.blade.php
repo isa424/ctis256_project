@@ -53,7 +53,10 @@
                       <label class="name">
                       Daniyal Admaney                    </label>
                       <label class="pull-right">                     
-                        <a  href="#" title="Delete"><img src = "images/delete.png" style="width:50px;height:50px;" ></a>
+                        <a  href="#" title="Delete">
+                          <i class="fas fa-trash-alt"></i>
+                          <!-- <img src = "images/delete.png" style="width:50px;height:50px;" > -->
+                        </a>
                         
                     </label>
                     <div class="break"></div>

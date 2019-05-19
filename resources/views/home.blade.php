@@ -83,6 +83,9 @@
                             <p> Cattle them herb there bearing tree great had days man own divided after i, brought. Fish i blessed. Lesser moved.</p>    
                            
                             <div class = "interaction">
+                                <a href="#">
+                                       <i class="far fa-thumbs-up"></i>
+                                </a>
                                 <a href = "#"> <img src = "images/votes/up.png" style="width:20px;height:20px;" >like (19) </a> 
                                 <a href = "#"> <img src = "images/votes/down.png" style="width:20px;height:20px;" >dislike (2) </a> 
                                 <a href = "#"> <img src = "images/votes/reply.png" style="width:15px;height:15px;" > reply </a>
