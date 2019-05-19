@@ -1,5 +1,14 @@
 
 @import url(https://fonts.googleapis.com/css?family=Nunito);
+
+#navbar-toggle collapsed{
+    background:#aaaa;
+
+}
+
+#navbar-header{
+    background:#AAAA
+}
 body {background-image:url('images/bg.jpeg');
 }
 
@@ -14,7 +23,7 @@ body {background-image:url('images/bg.jpeg');
 
 .posts .post {
     padding-left: 10px;
-    border-left: 3px solid #a21b24;
+    border-left: 3px solid teal;   
     margin-bottom: 50px;
 }
 
@@ -50,7 +59,8 @@ body {background-image:url('images/bg.jpeg');
 	font-size: 75%;
 	margin-left: 20px;
 	padding-left: 10px;
-    border-left: 2px solid teal;
+    border-left: 2px solid #14E6CD
+  ;
     margin-bottom: 10px;
 }
 

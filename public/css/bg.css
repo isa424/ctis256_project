@@ -1,2 +1,18 @@
 body {background-image:url('images/bg.jpeg');
 }
+body {
+          background: rgba(122, 130, 136, 0.01)
+    }
+
+    .card-transparent {
+        background: none;
+    }
+
+    .card-transparent .card-heading{
+        background: rgba(122, 130, 136, 0.2)!important;
+    }
+
+    .card-transparent .card-body{
+        background: rgba(46, 51, 56, 0.2)!important;
+    }
+.row new-post {background: rgba(122, 130, 136, 0.2)!important;}

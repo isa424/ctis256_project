@@ -5,17 +5,54 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
-                <div class="card-body">
+              
+                     <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+                    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+                    <div class="container bootstrap snippet">
+
+                      <div class="header">
+                        <h3 class="text-muted prj-name">
+                            <span class="fa fa-users fa-2x principal-title"></span>
+                            Home Page
+                        </h3>
+                    </div>
+
+                     <div class="jumbotron list-content">
+                        <form method="POST" action="{{ route('login') }}">
+                        @csrf
+
+                        <div class="form-group row" style = "padding-left: 20px; padding: auto;">
+                            <button type="submit" class="btn btn-primary" label for="search" class="col-md-4 col-form-label text-md-right right">{{ __('Search Friend 🔍') }}</label>
+
+                            <div class="col-md-12">
+                                <input id="search" type="search" class="form-control @error('search') is-invalid @enderror" name="search" value="{{ old('email') }}" required autocomplete="search">
+
+                                @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                </div>
+                            </button>
+                                @enderror
+                            </div>
+                        </div>
+                    </form>
+                    <div>
+                        <a href = "/friendslist" >View All Friends </a>
+                    </div>
+
+                        
+
+                <div class="card-body bg-dark text-white">
                     @if (session('status'))
                     <div class="alert alert-success" role="alert">
                         {{ session('status') }}
                     </div>
                     @endif
-                    You are logged in!
+                   
                     <section class = "row new-post">
                         <div class = "col-md-12 col-md-offset-3">
-                            <header><h3>What do you want to post?</h3> </header>
+                            <header><h3>Create New Post</h3> </header>
                             <form action = "">
                                 <div class ="form-group">
                                     <textarea class = "form-control" name = "new-post" id = "new-post" rows = 5 placeholder="What's on your mind?"></textarea>
@@ -35,6 +72,7 @@
                         </form>
                     </div>
                 </section>
+                <hr>
                 <section class = "row posts">
                     <div class = "col-md-6 col-md-offset-3">
                         <header><h3>Posts from other people...</h3></header>
@@ -76,7 +114,7 @@
                                 <a href = "#"> <img src = "images/votes/reply.png" style="width:15px;height:15px;" > reply </a>
                                 <br>
                                 <a href = "#">  <img src = "images/votes/edit.png" style="width:15px;height:15px;" > edit </a> 
-                                <a href = "#">  <img src = "images/votes/dlt.png" style="width:15px;height:15px;" >  </a>
+                                <a href = "#">  <img src = "images/votes/dlt.png" style="width:15px;height:15px;" > delete </a>
                            </div>
                             </article>
                         </article>
@@ -123,8 +161,11 @@
                            </div>
                         </article>
                     </div>
+                </section>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
     @endsection

@@ -30,6 +30,11 @@ Route::get ('/friendslist', function () {
 	return view('friendslist');
 });
 
+Route::get ('/search', function () {
+	return view('search');
+});
+
+
 
 Route::get('/images/delete.png', function() {
 	return view('/images/delete.png');
