@@ -23,7 +23,9 @@ Route::get ('/test', function () {
 	return view ('test'); } );
 
 Route::get ('/friends', function () {
-	return view ('friends'); } );
-Route::get('/images/delete.png', functions (){
-	return view ('/images/delete.png);
-})
+	return view('friends');
+});
+
+Route::get('/images/delete.png', function() {
+	return view('/images/delete.png');
+});
