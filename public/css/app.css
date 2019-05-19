@@ -1,5 +1,7 @@
 
 @import url(https://fonts.googleapis.com/css?family=Nunito);
+body {background-image:url('images/bg.jpeg');
+}
 
     padding: 16px 0;
     border-bottom: 1px solid #ccc;

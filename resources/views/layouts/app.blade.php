@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html style = "background-image:url('images/bg.jpg');" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -41,10 +41,13 @@
                     <ul class="navbar-nav mr-auto">
 
                     </ul>
-                    <ul class="navbar-nav ml-auto";> 
+                     @if (Route::has('register'))
+                                <ul class="navbar-nav ml-auto";> 
                         
                         <input type="text" placeholder="Search friend.."> <span  style = 'font-size: 15px'>🔍 </span>
                     </ul>
+                            @endif
+                   
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
