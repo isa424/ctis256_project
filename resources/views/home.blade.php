@@ -18,9 +18,6 @@
             </div>
 
             <div class="jumbotron list-content">
-                <table class = pull-center>
-                    <tr>
-                        <td>
                             <form method="POST" action="{{ route('login') }}">
                                 @csrf
 
@@ -40,18 +37,9 @@
                                 </div>
                             </div>
                         </form>
-                    </td>
-                    <td>
-                        <div>
-                            <form action="/ctis256_project/public/friendslist">
-                                <input type="submit" class =  "btn btn-primary pull-right "value="View All Friends"> 
-                            </form>
-                           
-
-                        </div>
-                    </td>
-                </tr>
-            </table>
+                    
+                    
+                       
 
 
             <div class="card-body bg-dark text-white">
@@ -66,7 +54,11 @@
                         <header><h3>Create New Post</h3> </header>
                         <form action = "">
                             <div class ="form-group">
+                                <textarea class = "form-control" name = "post-title" id = "post-title" rows = 1 placeholder="Post Title"></textarea>
+                                <br>
                                 <textarea class = "form-control" name = "new-post" id = "new-post" rows = 5 placeholder="What's on your mind?"></textarea>
+                                
+
                                 <div class = "col-md-9 col-md-offset-3">
                                     <label for="postPic" class=" col-form-label text-md-right">{{ __('Upload Image') }}</label>
                                     <input id="postPic" type = "file" name = "post_pic" class="form-control @error('Post Picture') is-invalid @enderror" name="postPic" value="{{ old('postPic') }}" autocomplete="postPic"> 

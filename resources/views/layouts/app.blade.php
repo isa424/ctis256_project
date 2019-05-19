@@ -44,8 +44,8 @@
                     </ul>
                     @if (Route::has('register'))
                     <ul class="navbar-nav ml-auto";> 
-                        
-                     
+
+
                     </ul>
                     @endif
                     
@@ -70,26 +70,42 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
-                            </a>
+                               <a class="dropdown-item" href="friendslist"
+                               >
+                               {{ __('Friends List') }}
+                           </a>
 
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
-                            </form>
-                        </div>
-                    </li>
-                    @endguest
-                </ul>
-            </div>
-        </div>
-    </nav>
+                           <a class="dropdown-item" href="home"
+                               >
+                               {{ __('Home Page') }}
+                           </a>
 
-    <main class="py-4">
-        @yield('content')
-    </main>
+
+
+                           <a class="dropdown-item" href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                           document.getElementById('logout-form').submit();">
+                           {{ __('Logout') }}
+                       </a>
+
+
+                       <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                        @csrf
+                    </form>
+
+
+
+                </div>
+            </li>
+            @endguest
+        </ul>
+    </div>
+</div>
+</nav>
+
+<main class="py-4">
+    @yield('content')
+</main>
 </div>
 </body>
 </html>
