@@ -18,10 +18,12 @@
                             <header><h3>What do you want to post?</h3> </header>
                             <form action = "">
                                 <div class ="form-group">
-                                    <textarea class = "form-control" name = "new-post" id = "new-post" rows = 5 placeholder="What's on your mind?" required></textarea>
+                                    <textarea class = "form-control" name = "new-post" id = "new-post" rows = 5 placeholder="What's on your mind?"></textarea>
                                     <div class = "col-md-9 col-md-offset-3">
                                     <label for="postPic" class=" col-form-label text-md-right">{{ __('Upload Image') }}</label>
                                      <input id="postPic" type = "file" name = "post_pic" class="form-control @error('Post Picture') is-invalid @enderror" name="postPic" value="{{ old('postPic') }}" autocomplete="postPic"> 
+
+
                                      @error('postPic')
                                      <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -43,38 +45,39 @@
                             <p> Cattle them herb there bearing tree great had days man own divided after i, brought. Fish i blessed. Lesser moved.</p>    
                            
                             <div class = "interaction">
-                                <a href = "#"> <img src = "images/votes/up.png" style="width:20px;height:20px;" >upvote (19) </a> 
-                                <a href = "#"> <img src = "images/votes/down.png" style="width:20px;height:20px;" >downvote (2) </a> 
+                                <a href = "#"> <img src = "images/votes/up.png" style="width:20px;height:20px;" >like (19) </a> 
+                                <a href = "#"> <img src = "images/votes/down.png" style="width:20px;height:20px;" >dislike (2) </a> 
                                 <a href = "#"> <img src = "images/votes/reply.png" style="width:15px;height:15px;" > reply </a>
                                 <br>
                                 <a href = "#">  <img src = "images/votes/edit.png" style="width:15px;height:15px;" > edit </a> 
                                 <a href = "#">  <img src = "images/votes/dlt.png" style="width:15px;height:15px;" > delete </a>
-                           
+                           </div>
                         </article>
                         <article class = "post">
                             <div class = "info">
                                 Posted by: Faran on 19 May 2019 at 10:05
                             </div>
                             <p> Cattle them herb there bearing tree great had days man own divided after i, brought. Fish i blessed. Lesser moved.</p>
-                            <div class = "interaction"> >
-                                <a href = "#"> upvote </a> -
-                                <a href = "#"> downvote </a> -
-                                <a href = "#"> reply </a> -
-                                <a href = "#"> edit </a> -
-                                <a href = "#"> delete </a> <
-                            </div>
-                            <article class = "reply">
+                             <div class = "interaction">
+                                <a href = "#"> <img src = "images/votes/up.png" style="width:20px;height:20px;" > like </a> 
+                                <a href = "#"> <img src = "images/votes/down.png" style="width:20px;height:20px;" >dislike (2) </a> 
+                                <a href = "#"> <img src = "images/votes/reply.png" style="width:15px;height:15px;" > reply </a>
+                                <br>
+                                <a href = "#">  <img src = "images/votes/edit.png" style="width:15px;height:15px;" > edit </a> 
+                                <a href = "#">  <img src = "images/votes/dlt.png" style="width:15px;height:15px;" > delete </a>
+                           </div>                            <article class = "reply">
                                 <div class = "info">
                                     Replied by: Faran on 19 May 2019 at 10:30
                                 </div>
                                 <p> Cattle them herb there bearing tree great had days man own divided after i, brought. Fish i blessed. Lesser moved.</p>
-                                <div class = "interaction"> >
-                                    <a href = "#"> upvote </a> -
-                                    <a href = "#"> downvote </a> -
-                                    <a href = "#"> reply </a> -
-                                    <a href = "#"> edit </a> -
-                                    <a href = "#"> delete </a> <
-                                </div>
+                                 <div class = "interaction">
+                                <a href = "#"> <img src = "images/votes/up.png" style="width:20px;height:20px;" >like (19) </a> 
+                                <a href = "#"> <img src = "images/votes/down.png" style="width:20px;height:20px;" >dislike (2) </a> 
+                                <a href = "#"> <img src = "images/votes/reply.png" style="width:15px;height:15px;" > reply </a>
+                                <br>
+                                <a href = "#">  <img src = "images/votes/edit.png" style="width:15px;height:15px;" > edit </a> 
+                                <a href = "#">  <img src = "images/votes/dlt.png" style="width:15px;height:15px;" >  </a>
+                           </div>
                             </article>
                         </article>
                         <article class = "post">
@@ -82,39 +85,42 @@
                                 Posted by: Isa on 18 May 2019 at 10:20
                             </div>
                             <p> Cattle them herb there bearing tree great had days man own divided after i, brought. Fish i blessed. Lesser moved.</p>                           
-                            <div class = "interaction"> >
-                                <a href = "#"> upvote </a> -
-                                <a href = "#"> downvote </a> -
-                                <a href = "#"> reply </a> -
-                                <a href = "#"> edit </a> -
-                                <a href = "#"> delete </a> <
-                            </div>
+                            <div class = "interaction">
+                                <a href = "#"> <img src = "images/votes/up.png" style="width:20px;height:20px;" >like (19) </a> 
+                                <a href = "#"> <img src = "images/votes/down.png" style="width:20px;height:20px;" >dislike (2) </a> 
+                                <a href = "#"> <img src = "images/votes/reply.png" style="width:15px;height:15px;" > reply </a>
+                                <br>
+                                <a href = "#">  <img src = "images/votes/edit.png" style="width:15px;height:15px;" > edit </a> 
+                                <a href = "#">  <img src = "images/votes/dlt.png" style="width:15px;height:15px;" > delete </a>
+                           </div>
                         </article>
                         <article class = "post">
                             <div class = "info">
                                 Posted by: Serkan on 18 May 2019 at 12:00
                             </div>
                             <p> Cattle them herb there bearing tree great had days man own divided after i, brought. Fish i blessed. Lesser moved.</p>           
-                            <div class = "interaction"> >
-                                <a href = "#"> upvote </a> -
-                                <a href = "#"> downvote </a> -
-                                <a href = "#"> reply </a> -
-                                <a href = "#"> edit </a> -
-                                <a href = "#"> delete </a> <
-                            </div>
+                            <div class = "interaction">
+                                <a href = "#"> <img src = "images/votes/up.png" style="width:20px;height:20px;" >like (19) </a> 
+                                <a href = "#"> <img src = "images/votes/down.png" style="width:20px;height:20px;" >dislike (2) </a> 
+                                <a href = "#"> <img src = "images/votes/reply.png" style="width:15px;height:15px;" > reply </a>
+                                <br>
+                                <a href = "#">  <img src = "images/votes/edit.png" style="width:15px;height:15px;" > edit </a> 
+                                <a href = "#">  <img src = "images/votes/dlt.png" style="width:15px;height:15px;" > delete </a>
+                           </div>
                         </article>
                         <article class = "post">
                             <div class = "info">
                                 Posted by: Admaney on 16 May 2019 at 22:05
                             </div>
                             <p> Cattle them herb there bearing tree great had days man own divided after i, brought. Fish i blessed. Lesser moved.</p>
-                            <div class = "interaction"> >
-                                <a href = "#"> upvote </a> -
-                                <a href = "#"> downvote </a> -
-                                <a href = "#"> reply </a> -
-                                <a href = "#"> edit </a> -
-                                <a href = "#"> delete </a> <
-                            </div>
+                            <div class = "interaction">
+                                <a href = "#"> <img src = "images/votes/up.png" style="width:20px;height:20px;" >like (19) </a> 
+                                <a href = "#"> <img src = "images/votes/down.png" style="width:20px;height:20px;" >dislike (2) </a> 
+                                <a href = "#"> <img src = "images/votes/reply.png" style="width:15px;height:15px;" > reply </a>
+                                <br>
+                                <a href = "#">  <img src = "images/votes/edit.png" style="width:15px;height:15px;" > edit </a> 
+                                <a href = "#">  <img src = "images/votes/dlt.png" style="width:15px;height:15px;" > delete </a>
+                           </div>
                         </article>
                     </div>
                 </div>
