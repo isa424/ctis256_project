@@ -34,6 +34,9 @@ Route::get ('/search', function () {
 	return view('search');
 });
 
+Route::get ('/edit', function () {
+	return view('edit');
+});
 
 
 Route::get('/images/delete.png', function() {
