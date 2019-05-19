@@ -18,7 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel = "stylesheet" href = "{{ URL::to('src/css/dashboard.css') }}">
+    <link rel = "stylesheet" href = "{{ URL::to('src/css/db.css') }}">
 </head>
 <body>
     <div id="app">
