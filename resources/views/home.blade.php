@@ -74,50 +74,85 @@
                 </section>
                 <hr>
                 <section class = "row posts">
-                    <div class = "col-md-6 col-md-offset-3">
+                    <div class = "col-md-12 col-md-offset-3">
                         <header><h3>Posts from other people...</h3></header>
                         <article class = "post">
                             <div class = "info">
                                 Posted by: Daniyal on 19 May 2019 at 22:05
                             </div>
-                            <p> Cattle them herb there bearing tree great had days man own divided after i, brought. Fish i blessed. Lesser moved.</p>    
+                            <p> Cattle them herb there bearing tree great had days man own divided after i, brought. Fish i blessed. Lesser moved. Cattle them herb there bearing tree great had days man own divided after i, brought. Fish i blessed. Lesser moved.Cattle them herb there bearing tree great...</p>    
                            
-                            <div class = "interaction">
+                            <div class = "col-md-12">
+
                                 <a href="#">
-                                       <i class="far fa-thumbs-up"></i>
+                                       <i class="far fa-thumbs-up"> like (19) </i>
                                 </a>
-                                <a href = "#"> <img src = "images/votes/up.png" style="width:20px;height:20px;" >like (19) </a> 
-                                <a href = "#"> <img src = "images/votes/down.png" style="width:20px;height:20px;" >dislike (2) </a> 
-                                <a href = "#"> <img src = "images/votes/reply.png" style="width:15px;height:15px;" > reply </a>
-                                <br>
-                                <a href = "#">  <img src = "images/votes/edit.png" style="width:15px;height:15px;" > edit </a> 
-                                <a href = "#">  <img src = "images/votes/dlt.png" style="width:15px;height:15px;" > delete </a>
+                                 <a href="#">
+                                       <i class="far fa-thumbs-down"> dislike (2) </i>
+                                </a>
+                                 <a href="#">
+                                       <i class="fas fa-share"> reply </i>
+                                </a>
+                                
+                                 <a href="#">
+                                       <i class="fas fa-edit"> edit  </i>
+                                </a>
+                                 <a href="#">
+                                       <i class="fas fa-trash-alt"> delete </i>
+                                </a>
+                                 
                            </div>
                         </article>
                         <article class = "post">
                             <div class = "info">
                                 Posted by: Faran on 19 May 2019 at 10:05
                             </div>
-                            <p> Cattle them herb there bearing tree great had days man own divided after i, brought. Fish i blessed. Lesser moved.</p>
-                             <div class = "interaction">
-                                <a href = "#"> <img src = "images/votes/up.png" style="width:20px;height:20px;" > like </a> 
-                                <a href = "#"> <img src = "images/votes/down.png" style="width:20px;height:20px;" >dislike (2) </a> 
-                                <a href = "#"> <img src = "images/votes/reply.png" style="width:15px;height:15px;" > reply </a>
-                                <br>
-                                <a href = "#">  <img src = "images/votes/edit.png" style="width:15px;height:15px;" > edit </a> 
-                                <a href = "#">  <img src = "images/votes/dlt.png" style="width:15px;height:15px;" > delete </a>
-                           </div>                            <article class = "reply">
+                          <p> Cattle them herb there bearing tree great had days man own divided after i, brought. Fish i blessed. Lesser moved. Cattle them herb there bearing tree great had days man own divided after i, brought. Fish i blessed. Lesser moved.Cattle them herb there bearing tree great...</p>    
+                           
+                            <div class = "col-md-12">
+
+                                <a href="#">
+                                       <i class="far fa-thumbs-up"> like (19) </i>
+                                </a>
+                                 <a href="#">
+                                       <i class="far fa-thumbs-down"> dislike (2) </i>
+                                </a>
+                                 <a href="#">
+                                       <i class="fas fa-share"> reply </i>
+                                </a>
+                                
+                                 <a href="#">
+                                       <i class="fas fa-edit"> edit  </i>
+                                </a>
+                                 <a href="#">
+                                       <i class="fas fa-trash-alt"> delete </i>
+                                </a>
+                                 
+                           </div>
+                           <article class = "reply">
                                 <div class = "info">
                                     Replied by: Faran on 19 May 2019 at 10:30
                                 </div>
                                 <p> Cattle them herb there bearing tree great had days man own divided after i, brought. Fish i blessed. Lesser moved.</p>
-                                 <div class = "interaction">
-                                <a href = "#"> <img src = "images/votes/up.png" style="width:20px;height:20px;" >like (19) </a> 
-                                <a href = "#"> <img src = "images/votes/down.png" style="width:20px;height:20px;" >dislike (2) </a> 
-                                <a href = "#"> <img src = "images/votes/reply.png" style="width:15px;height:15px;" > reply </a>
-                                <br>
-                                <a href = "#">  <img src = "images/votes/edit.png" style="width:15px;height:15px;" > edit </a> 
-                                <a href = "#">  <img src = "images/votes/dlt.png" style="width:15px;height:15px;" > delete </a>
+                                 <div class = "col-md-12">
+
+                                <a href="#">
+                                       <i class="far fa-thumbs-up"> like (19) </i>
+                                </a>
+                                 <a href="#">
+                                       <i class="far fa-thumbs-down"> dislike (2) </i>
+                                </a>
+                                 <a href="#">
+                                       <i class="fas fa-share"> reply </i>
+                                </a>
+                                
+                                 <a href="#">
+                                       <i class="fas fa-edit"> edit  </i>
+                                </a>
+                                 <a href="#">
+                                       <i class="fas fa-trash-alt"> delete </i>
+                                </a>
+                                 
                            </div>
                             </article>
                         </article>
@@ -125,42 +160,54 @@
                             <div class = "info">
                                 Posted by: Isa on 18 May 2019 at 10:20
                             </div>
-                            <p> Cattle them herb there bearing tree great had days man own divided after i, brought. Fish i blessed. Lesser moved.</p>                           
-                            <div class = "interaction">
-                                <a href = "#"> <img src = "images/votes/up.png" style="width:20px;height:20px;" >like (19) </a> 
-                                <a href = "#"> <img src = "images/votes/down.png" style="width:20px;height:20px;" >dislike (2) </a> 
-                                <a href = "#"> <img src = "images/votes/reply.png" style="width:15px;height:15px;" > reply </a>
-                                <br>
-                                <a href = "#">  <img src = "images/votes/edit.png" style="width:15px;height:15px;" > edit </a> 
-                                <a href = "#">  <img src = "images/votes/dlt.png" style="width:15px;height:15px;" > delete </a>
-                           </div>
-                        </article>
-                        <article class = "post">
-                            <div class = "info">
-                                Posted by: Serkan on 18 May 2019 at 12:00
-                            </div>
-                            <p> Cattle them herb there bearing tree great had days man own divided after i, brought. Fish i blessed. Lesser moved.</p>           
-                            <div class = "interaction">
-                                <a href = "#"> <img src = "images/votes/up.png" style="width:20px;height:20px;" >like (19) </a> 
-                                <a href = "#"> <img src = "images/votes/down.png" style="width:20px;height:20px;" >dislike (2) </a> 
-                                <a href = "#"> <img src = "images/votes/reply.png" style="width:15px;height:15px;" > reply </a>
-                                <br>
-                                <a href = "#">  <img src = "images/votes/edit.png" style="width:15px;height:15px;" > edit </a> 
-                                <a href = "#">  <img src = "images/votes/dlt.png" style="width:15px;height:15px;" > delete </a>
+                            <p> Cattle them herb there bearing tree great had days man own divided after i, brought. Fish i blessed. Lesser moved. Cattle them herb there bearing tree great had days man own divided after i, brought. Fish i blessed. Lesser moved.Cattle them herb there bearing tree great...</p>    
+                           
+                            <div class = "col-md-12">
+
+                                <a href="#">
+                                       <i class="far fa-thumbs-up"> like (19) </i>
+                                </a>
+                                 <a href="#">
+                                       <i class="far fa-thumbs-down"> dislike (2) </i>
+                                </a>
+                                 <a href="#">
+                                       <i class="fas fa-share"> reply </i>
+                                </a>
+                                
+                                 <a href="#">
+                                       <i class="fas fa-edit"> edit  </i>
+                                </a>
+                                 <a href="#">
+                                       <i class="fas fa-trash-alt"> delete </i>
+                                </a>
+                                 
                            </div>
                         </article>
                         <article class = "post">
                             <div class = "info">
                                 Posted by: Admaney on 16 May 2019 at 22:05
                             </div>
-                            <p> Cattle them herb there bearing tree great had days man own divided after i, brought. Fish i blessed. Lesser moved.</p>
-                            <div class = "interaction">
-                                <a href = "#"> <img src = "images/votes/up.png" style="width:20px;height:20px;" >like (19) </a> 
-                                <a href = "#"> <img src = "images/votes/down.png" style="width:20px;height:20px;" >dislike (2) </a> 
-                                <a href = "#"> <img src = "images/votes/reply.png" style="width:15px;height:15px;" > reply </a>
-                                <br>
-                                <a href = "#">  <img src = "images/votes/edit.png" style="width:15px;height:15px;" > edit </a> 
-                                <a href = "#">  <img src = "images/votes/dlt.png" style="width:15px;height:15px;" > delete </a>
+                            <p> Cattle them herb there bearing tree great had days man own divided after i, brought. Fish i blessed. Lesser moved. Cattle them herb there bearing tree great had days man own divided after i, brought. Fish i blessed. Lesser moved.Cattle them herb there bearing tree great...</p>    
+                           
+                            <div class = "col-md-12">
+
+                                <a href="#">
+                                       <i class="far fa-thumbs-up"> like (19) </i>
+                                </a>
+                                 <a href="#">
+                                       <i class="far fa-thumbs-down"> dislike (2) </i>
+                                </a>
+                                 <a href="#">
+                                       <i class="fas fa-share"> reply </i>
+                                </a>
+                                
+                                 <a href="#">
+                                       <i class="fas fa-edit"> edit  </i>
+                                </a>
+                                 <a href="#">
+                                       <i class="fas fa-trash-alt"> delete </i>
+                                </a>
+                                 
                            </div>
                         </article>
                     </div>
