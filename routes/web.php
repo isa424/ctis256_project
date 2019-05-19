@@ -26,6 +26,12 @@ Route::get ('/friends', function () {
 	return view('friends');
 });
 
+Route::get ('/friendslist', function () {
+	return view('friendslist');
+});
+
+
 Route::get('/images/delete.png', function() {
 	return view('/images/delete.png');
 });
+

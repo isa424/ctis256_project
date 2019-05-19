@@ -16,7 +16,7 @@
                                     <th></th> <th>Full name</th>  <th>Email Address</th> <th><th>
                                 </tr>
                                 <tr>
-                                    <td><img src = "images/person1.jpg" width = 200px height = auto></td> <td>Daniyal Admaney</td> <td>daniyaladmaney@gmail.com</td> <td><img src = "images/delete.png"></td> 
+                                    <td><img src = "images/person1.jpg" width = 50 height = auto></td> <td>Daniyal Admaney</td> <td>daniyaladmaney@gmail.com</td> <td><img src = "images/delete.png" width = 30px height = 30px></td> 
                                 </tr>
                             
                         </div>
