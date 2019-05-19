@@ -19,6 +19,8 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/friendslist.css') }}" rel="stylesheet">
+     <link href="{{ asset('css/interaction.css') }}" rel="stylesheet">
+
     <link rel = "stylesheet" href = "{{ URL::to('src/css/db.css') }}">
 </head>
 <body>

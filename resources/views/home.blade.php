@@ -22,7 +22,7 @@
                                     <div class = "col-md-9 col-md-offset-3">
                                     <label for="postPic" class=" col-form-label text-md-right">{{ __('Upload Image') }}</label>
                                      <input id="postPic" type = "file" name = "post_pic" class="form-control @error('Post Picture') is-invalid @enderror" name="postPic" value="{{ old('postPic') }}" autocomplete="postPic"> 
-
+3
 
                                      @error('postPic')
                                      <span class="invalid-feedback" role="alert">
@@ -42,14 +42,16 @@
                             <div class = "info">
                                 Posted by: Daniyal on 19 May 2019 at 22:05
                             </div>
-                            <p> Cattle them herb there bearing tree great had days man own divided after i, brought. Fish i blessed. Lesser moved.</p>      
-                            <div class = "interaction"> >
-                                <a href = "#"> upvote </a> -
-                                <a href = "#"> downvote </a> -
-                                <a href = "#"> reply </a> -
-                                <a href = "#"> edit </a> -
-                                <a href = "#"> delete </a> <
-                            </div>
+                            <p> Cattle them herb there bearing tree great had days man own divided after i, brought. Fish i blessed. Lesser moved.</p>    
+                           
+                            <div class = "interaction">
+                                <a href = "#"> <img src = "images/votes/up.png" style="width:20px;height:20px;" >upvote (19) </a> 
+                                <a href = "#"> <img src = "images/votes/down.png" style="width:20px;height:20px;" >downvote (2) </a> 
+                                <a href = "#"> <img src = "images/votes/reply.png" style="width:15px;height:15px;" > reply </a>
+                                <br>
+                                <a href = "#">  <img src = "images/votes/edit.png" style="width:15px;height:15px;" > edit </a> 
+                                <a href = "#">  <img src = "images/votes/dlt.png" style="width:15px;height:15px;" > delete </a>
+                           
                         </article>
                         <article class = "post">
                             <div class = "info">

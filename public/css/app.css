@@ -1,4 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);
+
+.interaction {
+    font-style: italic;
+}
+
 .new-post {
     padding: 16px 0;
     border-bottom: 1px solid #ccc;
@@ -53,6 +58,7 @@
 
 #delete = 
 {font-size: 1000%;}
+
 
 
 /*!
