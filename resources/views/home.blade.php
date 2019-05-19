@@ -18,12 +18,10 @@
                             <header><h3>What do you want to post?</h3> </header>
                             <form action = "">
                                 <div class ="form-group">
-                                    <textarea class = "form-control" name = "new-post" id = "new-post" rows = 5 placeholder="What's on your mind?"></textarea>
+                                    <textarea class = "form-control" name = "new-post" id = "new-post" rows = 5 placeholder="What's on your mind?" required></textarea>
                                     <div class = "col-md-9 col-md-offset-3">
                                     <label for="postPic" class=" col-form-label text-md-right">{{ __('Upload Image') }}</label>
                                      <input id="postPic" type = "file" name = "post_pic" class="form-control @error('Post Picture') is-invalid @enderror" name="postPic" value="{{ old('postPic') }}" autocomplete="postPic"> 
-3
-
                                      @error('postPic')
                                      <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

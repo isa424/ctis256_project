@@ -20,6 +20,8 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/friendslist.css') }}" rel="stylesheet">
      <link href="{{ asset('css/interaction.css') }}" rel="stylesheet">
+     <link href="{{ asset('css/bg.css') }}" rel="stylesheet">
+
 
     <link rel = "stylesheet" href = "{{ URL::to('src/css/db.css') }}">
 </head>
@@ -39,10 +41,15 @@
                     <ul class="navbar-nav mr-auto">
 
                     </ul>
+                    <ul class="navbar-nav ml-auto";> 
+                        
+                        <input type="text" placeholder="Search friend.."> <span  style = 'font-size: 15px'>🔍 </span>
+                    </ul>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
                         <!-- Authentication Links -->
+
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
