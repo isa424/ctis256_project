@@ -16,6 +16,18 @@ body {background-image:url('images/bg.jpeg');
     border-bottom: 1px solid #ccc;
 }
 
+table {
+  border-collapse: separate;
+  border-spacing: 1000px; 0;
+}
+
+td {
+  padding-left: 50%;
+}
+.postTitle {
+    font-size: 150%; 
+    font-weight: bold;
+}
 .new-post header,
 .posts header {
     margin-bottom: 20px;
