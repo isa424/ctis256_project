@@ -32,34 +32,87 @@
                             </label>
 
                             <label class="pull-right">                     
-                                <a  href="#" title="Delete"><img src = "images/delete.png" width = 10px height = 10px    ></a>
+                                <a  href="#" title="Delete"><img src = "images/delete.png" style="width:50px;height:50px;"  ></a>
   
                             </label>
                             <div class="break"></div>
                         </li>
                         <li href="#" class="list-group-item text-left">
-                          <img class="img-thumbnail"  src="https://bootdey.com/img/Content/user_1.jpg">
+                          <img class="img-thumbnail"  src="images/friend_icons/friend-2.png">
                           <label class="name">
-                              James Rodriguez (10)
+                              James Rodriguez 
                           </label>
 
-                          <label class="pull-right">
-                            <a  class="btn btn-success btn-xs glyphicon glyphicon-ok" href="#" title="View"></a>
-                            <a  class="btn btn-danger  btn-xs glyphicon glyphicon-trash" href="#" title="Delete"></a>
-                            <a  class="btn btn-info  btn-xs glyphicon glyphicon glyphicon-comment" href="#" title="Send message"></a>
-                        </label>
+                          <label class="pull-right">                     
+                                <a  href="#" title="Delete"><img src = "images/delete.png" style="width:50px;height:50px;" ></a>
+  
+                            </label>
                         <div class="break"></div>
                     </li>
                     <li href="#" class="list-group-item text-left">
-                      <img class="img-thumbnail"  src="https://bootdey.com/img/Content/user_2.jpg">
+                      <img class="img-thumbnail"  src="images/friend_icons/friend-3.png">
                       <label class="name">
                         Mariana pajon
                     </label>
-                    <label class="pull-right">
-                        <a  class="btn btn-success btn-xs glyphicon glyphicon-ok" href="#" title="View"></a>
-                        <a  class="btn btn-danger  btn-xs glyphicon glyphicon-trash" href="#" title="Delete"></a>
-                        <a  class="btn btn-info  btn-xs glyphicon glyphicon glyphicon-comment" href="#" title="Send message"></a>
+                    <label class="pull-right">                     
+                                <a  href="#" title="Delete"><img src = "images/delete.png" style="width:50px;height:50px;" ></a>
+  
+                            </label>
+                    <div class="break"></div>
+                </li>
+                 <li href="#" class="list-group-item text-left">
+                      <img class="img-thumbnail"  src="images/friend_icons/friend-4.png">
+                      <label class="name">
+                        Mariana pajon
                     </label>
+                    <label class="pull-right">                     
+                                <a  href="#" title="Delete"><img src = "images/delete.png" style="width:50px;height:50px;" ></a>
+  
+                            </label>
+                    <div class="break"></div>
+                </li>
+                 <li href="#" class="list-group-item text-left">
+                      <img class="img-thumbnail"  src="images/friend_icons/friend-5.png">
+                      <label class="name">
+                        Mariana pajon
+                    </label>
+                    <label class="pull-right">                     
+                                <a  href="#" title="Delete"><img src = "images/delete.png" style="width:50px;height:50px;"width = 10px height = 10px    ></a>
+  
+                            </label>
+                    <div class="break"></div>
+                </li>
+                 <li href="#" class="list-group-item text-left">
+                      <img class="img-thumbnail"  src="images/friend_icons/friend-6.png">
+                      <label class="name">
+                        Mariana pajon
+                    </label>
+                    <label class="pull-right">                     
+                                <a  href="#" title="Delete"><img src = "images/delete.png" style="width:50px;height:50px;"width = 10px height = 10px    ></a>
+  
+                            </label>
+                    <div class="break"></div>
+                </li>
+                 <li href="#" class="list-group-item text-left">
+                      <img class="img-thumbnail"  src="images/friend_icons/friend-7.png">
+                      <label class="name">
+                        Mariana pajon
+                    </label>
+                    <label class="pull-right">                     
+                                <a  href="#" title="Delete"><img src = "images/delete.png" style="width:50px;height:50px;"width = 10px height = 10px    ></a>
+  
+                            </label>
+                    <div class="break"></div>
+                </li>
+                 <li href="#" class="list-group-item text-left">
+                      <img class="img-thumbnail"  src="images/friend_icons/friend-8.png">
+                      <label class="name">
+                        Mariana pajon
+                    </label>
+                    <label class="pull-right">                     
+                                <a  href="#" title="Delete"><img src = "images/delete.png" style="width:50px;height:50px;" ></a>
+  
+                            </label>
                     <div class="break"></div>
                 </li>
                 <li href="#" class="list-group-item text-left">
