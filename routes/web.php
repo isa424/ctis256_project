@@ -38,8 +38,10 @@ Route::get ('/edit', function () {
 	return view('edit');
 });
 
-
-Route::get('/images/delete.png', function() {
-	return view('/images/delete.png');
+Route::get ('/reply', function () {
+	return view('reply');
 });
 
+Route::get ('/userProfile', function () {
+	return view('userProfile');
+});
