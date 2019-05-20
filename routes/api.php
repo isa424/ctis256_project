@@ -17,6 +17,9 @@ Route::post('/friend/accept', 'UserController@acceptFriendRequest');
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::post('/posts/like', 'PostController@likePost');
+Route::post('/posts/unlike', 'PostController@unlikePost');
+Route::post('/friends/send', 'UserController@sendFriendRequest');
 
 Route::group(['middleware' => 'auth'], function() {
     // Users
@@ -28,8 +31,6 @@ Route::group(['middleware' => 'auth'], function() {
     Route::post('/posts', 'PostController@makePost');
     Route::post('/posts/{id}', 'PostController@editPost');
     Route::delete('/posts/{id}', 'PostController@deletePost');
-    Route::post('/posts/{id}/like', 'PostController@likePost');
-    Route::post('/posts/{id}/dislike', 'PostController@dislikePost');
 
     // Comments
     Route::post("/posts/{postId}/comments", 'CommentController@makeComment');

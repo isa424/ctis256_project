@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use \App\Post;
+use \App\{Post, Like};
 
 class PostController extends Controller
 {
@@ -30,21 +30,17 @@ class PostController extends Controller
     public function deletePost(int $id) {
         Post::where('id', $id)->delete();
 
-        return response()->json(null);
+        return redirect('/home');
     }
 
     /**
      * If already liked, removes the like. JSON
      */
     public function likePost(Request $request) {
-        $this->validate($request, [
-            'post' => 'required|numeric',
-        ]);
-
         $like = new Like();
         $like->post_id = $request->input('post');
-        
-        auth()->user()->likes()->save($like);
+        $like->user_id = $request->input('user');
+        $like->save();
 
         return response()->json(null);
     }
@@ -53,8 +49,8 @@ class PostController extends Controller
      * If already disliked, removes the dislike. JSON
      */   
     public function unlikePost(Request $request) {
-        $this->validate($request, [
-            'post' => 'required|numeric',
-        ]);
+        Like::where('post_id', $request->input('post'))->where('user_id', $request->input('user'))->delete();
+
+        return response()->json(null);
     }
 }

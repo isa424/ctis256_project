@@ -6,7 +6,6 @@
     <div class="col-md-8">
       <div class="card-header">
 
-       <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
        <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
        <div class="container bootstrap snippet">
 
@@ -50,21 +49,20 @@
                 <div class = "col-md-12 col-md-offset-3">
                   <header><h3>Posts from other people...</h3></header>
 
-
-                  @for ($i = 0; $i <10; $i++)
+                @foreach($posts as $post)
 
                   <article class = "post">
                     <div class = "postTitle">
-                      Lorem Ipsum
+                      {{$post->title}}
                     </div>
                     <div class = "info">
-                      Posted by: Daniyal on 19 May 2019 at 10:05
+                      Posted by: {{$post->user->name}} on 19 May 2019 at 10:05
                     </div>
-                    <p> Cattle them herb there bearing tree great had days man own divided after i, brought. Fish i blessed. Lesser moved. Cattle them herb there bearing tree great had days man own divided after i, brought. Fish i blessed. Lesser moved.Cattle them herb there bearing tree great...</p>    
+                    <p>{{$post->text}}</p>    
 
                     <div class = "col-md-12">
 
-                      <a href="#" class="like-button" id="{{$i}}">
+                      <a href="#" class="like-button" id="{{$post->id}}">
                         <i class="far fa-thumbs-up mr-2" > like (19) </i>
                       </a>
                      
@@ -72,10 +70,10 @@
                        <i class="fas fa-share mr-2"> reply </i>
                      </a>
 
-                     <a href="#">
+                     <a href="{{url('/posts/' . $post->id . '/edit')}}">
                        <i class="fas fa-edit mr-2"> edit  </i>
                      </a>
-                     <a href="#">
+                     <a href="{{url('/posts/' . $post->id . '/delete')}}">
                        <i class="fas fa-trash-alt me-2"> delete </i>
                      </a>
 
@@ -106,8 +104,10 @@
                  </div>
                </article>
              </article>
-             @endfor
+           @endforeach
            </div>
+           
+            {{ $posts->links() }}
          </section>
        </div>
      </div>

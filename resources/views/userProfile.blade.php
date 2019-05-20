@@ -8,15 +8,8 @@
 
                 <div class="card-body">
 
-                    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
                     <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
                     <div class="container bootstrap snippet">
-
-                      <div class="header">
-                        <h3 class="text-muted prj-name">
-                            <span style="color:navy"class="fas fa-id-badge fa-2x principal-title"></span>
-                            <span style="color:navy">My Profile</span>
-                        </h3>
                     </div>
 
 
@@ -24,9 +17,9 @@
                         <ul class="list-group">
 
                             <li href="#" class="list-group-item text-left bg-dark">
-                                <img class="img-thumbnail" src="images/friend_icons/friend-1.png" style="width:200px;height:auto";>
+                                <img class="img-thumbnail" src="{{url('images/friend_icons/friend-1.png')}}" style="width:200px;height:auto">
                                 <label style = "font-size:20px"class="name">
-                                    <b>Daniyal Admaney</b><br>
+                                    <b>{{$user->name}}</b><br>
                                     <a style = "font-size:15px">5 June 1998</a><br>
                                     Male <br>
 
@@ -56,17 +49,15 @@
                                         <header><h3>Your Posts </h3> </header>
 
 
-                                        @for ($i = 0; $i <3; $i++)
+                                        @foreach($user->posts as $post)
 
                                         <article class = "post">
                                             <div class = "postTitle" href = "#">
-                                              Lorem Ipsum
+                                              {{$post->title}}
                                           </div>
-                                          <div class = "info">
-                                              Posted by: Daniyal on 19 May 2019 at 10:05
-                                          </div>
-                                          <p> Cattle them herb there bearing tree great had days man own divided after i, brought. Fish i blessed. Lesser moved. Cattle them herb there bearing tree great had days man own divided after i, brought. Fish i blessed. Lesser moved.Cattle them herb there bearing tree great...</p>    
+                                          <p>{{$post->text}}</p>    
 
+                                          @if(auth()->id() == $user->id)
                                           <div class = "col-md-12">
 
                                              <a href="#">
@@ -77,36 +68,27 @@
                                              </a>
 
                                          </div>
+                                         @endif
 
                                      </article>
-                                     @endfor
+                                     @endforeach
                                      <hr>
                                      <header><h3>Your Comments</h3> </header>
 
-                                     @for ($i = 0; $i <3; $i++)
+                                     @foreach($user->comments as $comment)
 
                                      <article class = "reply">
                                         <div class = "postTitle" href = "#">
-                                          Lorem Ipsum
+                                          {{$comment->text}}
                                       </div>
                                       <div class = "info">
                                         Replied by: Daniyal on 19 May 2019 at 10:05
                                     </div>
                                     <p> Cattle them herb there bearing tree great had days man own divided after i, brought. Fish i blessed. Lesser moved. Cattle them herb...</p>    
-
                                     <div class = "col-md-12">
-
-                                     <a href="#">
-                                         <i class="fas fa-edit mr-2"> edit  </i>
-                                     </a>
-                                     <a href="#">
-                                         <i class="fas fa-trash-alt me-2"> delete </i>
-                                     </a>
-
                                  </div>
-
                              </article>
-                             @endfor
+                             @endforeach
                              <hr>
 
                              <a href="{{ route('home') }}">    <button  class = "btn btn-primary">Return to Dashboard </button>
