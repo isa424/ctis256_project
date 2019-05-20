@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html style = "background-image:url('images/bg.jpg');" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html style = "background-image:url('images/grayBg.png'); min-height: 100%;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;
+background-size: cover;" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,7 +32,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel" bg>
+        <nav id = "navbar-custom" class="navbar navbar-expand-md navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'ConnectYou') }}
@@ -80,6 +84,12 @@
                           >
                           {{ __('Friends List') }}
                       </a>
+
+                       <a class="dropdown-item" href="search"
+                          >
+                          {{ __('Search People') }}
+                      </a>
+
 
                       
 

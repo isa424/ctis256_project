@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div class="card-header">
 
              <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
              <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
@@ -12,15 +12,14 @@
 
               <div class="header">
                 <h3 class="text-muted prj-name">
-                    <span class="fa fa-users fa-2x principal-title"></span>
-                    Home Page
+                    <span style="color:navy"class="fas fa-home fa-2x principal-title"></span>
+                    <span style="color:navy">Home Page</span>
                 </h3>
             </div>
 
             <div class="jumbotron list-content">
                            
-                    
-                       
+  
 
 
             <div class="card-body bg-dark text-white">
@@ -38,7 +37,8 @@
                                 <textarea class = "form-control" name = "post-title" id = "post-title" rows = 1 placeholder="Post Title" required></textarea>
                                 <br>
                                 <textarea class = "form-control" name = "new-post" id = "new-post" rows = 5 placeholder="What's on your mind?" required></textarea>
-                            <button type = "submit" class = "btn btn-primary">New Post</button>
+                                <br>
+                            <button type = "submit" class = "btn btn-primary">Make Post</button>
                         </form>
                     </div>
                 </section>

@@ -4,7 +4,7 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-8">
-      <div class="card">
+      <div class="card-header">
 
         <div class="card-body">
 
@@ -14,8 +14,8 @@
 
             <div class="header">
               <h3 class="text-muted prj-name">
-                <span class="fa fa-users fa-2x principal-title"></span>
-                Search for friends
+                <span style = "color:navy" class="fas fa-search-plus fa-2x principal-title"></span>
+               <span style = "color:navy"> Search for friends</span>
               </h3>
             </div>
             <div class="jumbotron list-content">

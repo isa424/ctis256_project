@@ -6,10 +6,9 @@
 
 }
 
+#navbar-custom { color: red; background-color: rgb(255,255,255,0.5); !important; }
 #navbar-header{
     background:#AAAA
-}
-body {background-image:url('images/bg.jpeg');
 }
 
     padding: 16px 0;
