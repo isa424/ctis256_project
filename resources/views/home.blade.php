@@ -32,11 +32,12 @@
             <section class = "row new-post">
               <div class = "col-md-12 col-md-offset-3">
                 <header><h3>Create New Post</h3> </header>
-                <form action = "">
+                <form action="{{url('/posts')}}" method="POST">
                   <div class ="form-group">
-                    <textarea class = "form-control" name = "post-title" id = "post-title" rows = 1 placeholder="Post Title" required></textarea>
+                    @csrf()
+                    <textarea class = "form-control" name = "title" id = "post-title" rows = 1 placeholder="Post Title" required></textarea>
                     <br>
-                    <textarea class = "form-control" name = "new-post" id = "new-post" rows = 5 placeholder="What's on your mind?" required></textarea>
+                    <textarea class = "form-control" name = "text" id = "new-post" rows = 5 placeholder="What's on your mind?" required></textarea>
                     <br>
                     <button type = "submit" class = "btn btn-primary">Make Post</button>
                   </form>

@@ -45,3 +45,5 @@ Route::get ('/reply', function () {
 Route::get ('/userProfile', function () {
 	return view('userProfile');
 });
+
+Route::post('/posts', 'PostController@makePost');

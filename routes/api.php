@@ -39,4 +39,5 @@ Route::group(['middleware' => 'auth'], function() {
     // TODO: Friends
     // Route::post('/friends/{id}', '');
     // Route::delete('/friends/{id}', '');
+    Route::delete('/posts/{id}', 'PostController@deletePost');
 });
