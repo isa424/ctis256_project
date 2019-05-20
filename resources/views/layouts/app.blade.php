@@ -66,7 +66,7 @@ background-size: cover;" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
                          <a id="navbarDropdown" style ="font-size:200% ;display:inline-block;" class="nav-link dropdown-toggle fas fa-envelope" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre> 
 
                          </a>
-                         <ul class="dropdown-menu notify-drop col-md-12"> 
+                         <ul class="dropdown-menu notify-drop" style="width: 300px;"> 
                             <div class="notify-drop-title">
                                 <div class="row">
 
@@ -78,7 +78,7 @@ background-size: cover;" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
                             <div class="drop-content">
                                 <li>
                                     <div class="col-md-12 col-sm-12 col-xs-12"><div class="notify-img"><img src="images/friend_icons/friend-1.png" alt="" width = "35"></div></div>
-                                    <div class="col-md-9 col-sm-9 col-xs-9 pd-l0"><a href=""><b>Daniyal Admaney</b></a> has sent you a friend request!<br> 
+                                    <div class="col-md-12"><a href=""><b>Daniyal Admaney</b></a> has sent you a friend request!<br> 
                                         <a style = "color:#008000; font-size:70%;" class="fas fa-user-plus" href=""> Accept Request</a> <a class="rIcon"></a>
                                         <a style = "color:#ff0000; font-size:70%" class="fas fa-times-circle" href=""> Reject Request</a> <a class="rIcon"></a>
                                         <hr>

@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Notifications\FriendRequestSent;
+use App\Notifications\FriendRequestAccepted;
+use App\User;
 
 class UserController extends Controller
 {
@@ -27,5 +30,31 @@ class UserController extends Controller
 
     public function updateProfile(Request $request) {
         # code...
+    }
+
+    public function sendFriendRequest(Request $request)
+    {
+        $this->validate($request, [
+            'user' => 'required|numeric',
+            'friend' => 'required|numeric'
+        ]);
+
+        $user = User::where('id', $request->input('user'))->first();
+        $friend = User::where('id', $request->input('friend'))->first();
+
+        $user->notify(new FriendRequestSent($friend));
+    }
+
+    public function acceptFriendRequest(Request $request)
+    {
+        $this->validate($request, [
+            'user' => 'required|numeric',
+            'friend' => 'required|numeric'
+        ]);
+
+        $user = User::where('id', $request->input('user'))->first();
+        $friend = User::where('id', $request->input('friend'))->first();
+
+        $user->notify(new FriendRequestAccepted($friend));
     }
 }
