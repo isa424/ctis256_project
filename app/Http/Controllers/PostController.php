@@ -23,8 +23,20 @@ class PostController extends Controller
         return redirect('/home');
     }
 
-    public function editPost(Request $request) {
-        # code...
+    public function editPost($id) {
+        $post = Post::where('id', $id)->first();
+
+        return view('edit', ['post' => $post]);
+    }
+
+    public function updatePost($id, Request $request)
+    {
+        Post::where('id', $id)->update([
+            'title' => $request->input('title'),
+            'text' => $request->input('text'),
+        ]);
+
+        return redirect('/home');
     }
 
     public function deletePost(int $id) {
