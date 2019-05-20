@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\{Post, User, Comment};
 
 class CommentController extends Controller
 {
@@ -13,21 +14,23 @@ class CommentController extends Controller
         $this->validate($request, [
             'post' => 'required|numeric',
             'text' => 'required|string',
+            'user' => 'required|numeric',
         ]);
 
-        $post = Post::findById($request->input('post'));
+        $post = Post::where('id', $request->input('post'))->first();
 
         if (!$post) {
             return response()->json(null, 404);
         }
 
         $comment = new Comment;
-        $comment->text = $request->input('title');
-        $comment->user_id = auth()->id();
+        $comment->text = $request->input('text');
+        $comment->user_id = $request->input('user');
 
         $post->comments()->save($comment);
+        $user = User::where('id', $request->input('user'))->first();
 
-        return view('comments.view', $comment);
+        return response()->json(['id' => $comment->id, 'username' => $user->name]);
     }
 
     // /**

@@ -31,11 +31,11 @@ background-size: cover;" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 
     <script type="text/javascript">
+       window.user_id = {{auth()->id()}};
         window.url = '/ctis256_project/public';
         window.Laravel = {!! json_encode([
            'csrfToken' => csrf_token(),
        ]) !!};
-       window.user_id = {{auth()->id()}};
     </script>
     <script src="{{URL::to('js/main.js')}}"></script>
 </head>

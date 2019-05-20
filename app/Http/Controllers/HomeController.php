@@ -27,7 +27,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $posts = Post::with('comments')->simplePaginate(10);
         $notifications = \DB::table('notifications')->where('notifiable_id', auth()->id())->whereNull('read_at')->get();
         $friendIds = $notifications->pluck('data')->map(function($data) {
             return ((array) json_decode($data))['friend_id'];
@@ -47,9 +46,13 @@ class HomeController extends Controller
             return $notification;
         });
 
+        $friendIds = \DB::table('friendships')->where('user_id', auth()->id())->get()->pluck('friend_id');
         $unreadCount = $notifications->filter(function($n) {
             return !$n->read_at;
         })->count();
+
+        $friendIds[] = auth()->id();
+        $posts = Post::whereIn('user_id', $friendIds)->with('comments')->simplePaginate(10);
 
         return view('home', ['posts' => $posts, 'notifications' => $notifications, 'unread_count' => $unreadCount]);
     }

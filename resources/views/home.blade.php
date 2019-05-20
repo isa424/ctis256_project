@@ -61,7 +61,7 @@
 
                   @foreach($posts as $post)
 
-                  <article class = "post">
+                  <article class = "post" id="post-{{$post->id}}">
                     <div class = "postTitle">
                       {{$post->title}}
                     </div>
@@ -79,15 +79,20 @@
                       <i onclick="myFunction(this)" class="far fa-thumbs-up">like</i>
                       (<span class ="num">19</span>)
                     </a>
+                    @if($post->user->id == auth()->id())
+                     <a href="{{url('/posts/' . $post->id . '/edit')}}">
+                       <i class="fas fa-edit mr-2"> edit  </i>
+                     </a>
+                     <a href="{{url('/posts/' . $post->id . '/delete')}}">
+                       <i class="fas fa-trash-alt me-2"> delete </i>
+                     </a>
+                     @endif()
 
                     
-
-                    <a href="{{url('/posts/' . $post->id . '/edit')}}">
-                     <i class="fas fa-edit mr-2"> edit  </i>
-                   </a>
-                   <a href="{{url('/posts/' . $post->id . '/delete')}}">
-                     <i class="fas fa-trash-alt me-2"> delete </i>
-                   </a>
+                    <!-- <textarea class = "form-control" name = "reply-to-post" id="comment-{{$post->id}}" rows = 1 placeholder="Type your reply"></textarea>     -->
+                    <input class = "form-control" name = "reply-to-post" id="comment-{{$post->id}}" rows = 1 placeholder="Type your reply"/>    
+                    <button type = "submit" class = "btn btn-primary make-comment" id="{{$post->id}}" style=" margin-top: 5px; margin-right:10px">Reply</button>
+                  </div>
 
                  </div>
                  <div class = "replyBox col-md-12" style="padding:10px; margin-top: 13px; margin-bottom: 10px">
@@ -96,22 +101,17 @@
                   <button type = "submit" class = "btn btn-primary  " style=" margin-top: 5px; margin-right:10px">Reply</button>
                 </div>
 
-
-                <article class = "reply">
-                  <div class = "info">
-                    Replied by: Faran on 19 May 2019 at 10:30
-                  </div>
-                  <p> Cattle them herb there bearing tree great had days man own divided after i, brought. Fish i blessed. Lesser moved.</p>
-                  <div class = "interactions col-md-12">
-
-                    <a href="#" class="likeIt">
-                      <i class="far fa-thumbs-up mr-2">like</i>
-                      (<span>19</span>)
-                    </a>  
-                  </article>
+                  @foreach($post->comments as $comment)
+                  <article class = "reply" id="reply-{{$comment->id}}">
+                    <div class = "info">
+                      Replied by: {{$comment->user->name}} on {{$comment->updated_at->diffForHumans()}}
+                    </div>
+                    <p>{{$comment->text}}</p>
                 </article>
                 @endforeach
-              </div>
+              </article>
+              @endforeach
+            </div>
 
               {{ $posts->links() }}
             </section>
