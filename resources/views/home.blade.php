@@ -50,14 +50,13 @@
                   <header><h3>Posts from other people...</h3></header>
                   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
                   <script>  
-                    $(document).ready(function(){  
-                      $(".replyIcon").click(function(){  
-                        $(".replyBox").fadeToggle("fast");  
-                      });  
-                      $(".replyIcon2").click(function(){  
-                        $(".replyBox2").fadeToggle("fast");  
-                      });  
-                    });  
+                    function myFunction(x) {
+                      x.classList.toggle("likeToggle fa-thumbs-down");
+                      x.classList.toggle("fa-thumbs-down");
+                    }
+
+
+
                   </script>  
 
                   @foreach($posts as $post)
@@ -75,50 +74,63 @@
 
 
 
-                      
 
-                     <a href="{{url('/posts/' . $post->id . '/edit')}}">
-                       <i class="fas fa-edit mr-2"> edit  </i>
-                     </a>
-                     <a href="{{url('/posts/' . $post->id . '/delete')}}">
-                       <i class="fas fa-trash-alt me-2"> delete </i>
-                     </a>
+                     <a  class="like-button" id="likeButton">
+                      <i onclick="myFunction(this)" class="far fa-thumbs-up">like</i>
+                      (<span class ="num">19</span>)
+                    </a>
 
-                   </div>
-                   <div class = "replyBox col-md-12" style="padding:10px; margin-top: 13px; margin-bottom: 10px">
+                    
 
-                    <textarea class = "form-control" name = "reply-to-post" id = "reply-to-post" rows = 1 placeholder="Type your reply"></textarea>    
-                    <button type = "submit" class = "btn btn-primary  " style=" margin-top: 5px; margin-right:10px">Reply</button>
+                    <a href="{{url('/posts/' . $post->id . '/edit')}}">
+                     <i class="fas fa-edit mr-2"> edit  </i>
+                   </a>
+                   <a href="{{url('/posts/' . $post->id . '/delete')}}">
+                     <i class="fas fa-trash-alt me-2"> delete </i>
+                   </a>
+
+                 </div>
+                 <div class = "replyBox col-md-12" style="padding:10px; margin-top: 13px; margin-bottom: 10px">
+
+                  <textarea class = "form-control" name = "reply-to-post" id = "reply-to-post" rows = 1 placeholder="Type your reply"></textarea>    
+                  <button type = "submit" class = "btn btn-primary  " style=" margin-top: 5px; margin-right:10px">Reply</button>
+                </div>
+
+
+                <article class = "reply">
+                  <div class = "info">
+                    Replied by: Faran on 19 May 2019 at 10:30
                   </div>
+                  <p> Cattle them herb there bearing tree great had days man own divided after i, brought. Fish i blessed. Lesser moved.</p>
+                  <div class = "interactions col-md-12">
 
-
-                  <article class = "reply">
-                    <div class = "info">
-                      Replied by: Faran on 19 May 2019 at 10:30
-                    </div>
-                    <p> Cattle them herb there bearing tree great had days man own divided after i, brought. Fish i blessed. Lesser moved.</p>
-                    <div class = "interactions col-md-12">
-
-                      <a href="#" class="likeIt">
-                        <i class="far fa-thumbs-up mr-2">like</i>
-                        (<span>19</span>)
-                      </a>  
+                    <a href="#" class="likeIt">
+                      <i class="far fa-thumbs-up mr-2">like</i>
+                      (<span>19</span>)
+                    </a>  
+                  </article>
                 </article>
-              </article>
-              @endforeach
-            </div>
+                @endforeach
+              </div>
 
-            {{ $posts->links() }}
-          </section>
+              {{ $posts->links() }}
+            </section>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-</div>
 
 <script type="text/javascript">
-  console.log('here')
+  console.log('here');
+
+  var token = '{{ Session::token() }}';
+
+
+</script>
+
+
 
 </script>
 @endsection

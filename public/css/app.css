@@ -1,6 +1,12 @@
 
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 
+.likeIt {
+    display: inline-block;
+}
+.unlikeIt {
+    display:inline-block;
+}
 .interactions:hover{
        color:##007399; 
 }
