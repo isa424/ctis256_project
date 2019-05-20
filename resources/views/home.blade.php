@@ -48,8 +48,19 @@
               <section class = "row posts">
                 <div class = "col-md-12 col-md-offset-3">
                   <header><h3>Posts from other people...</h3></header>
+                  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
+                  <script>  
+                    $(document).ready(function(){  
+                      $(".replyIcon").click(function(){  
+                        $(".replyBox").fadeToggle("fast");  
+                      });  
+                      $(".replyIcon2").click(function(){  
+                        $(".replyBox2").fadeToggle("fast");  
+                      });  
+                    });  
+                  </script>  
 
-                @foreach($posts as $post)
+                  @foreach($posts as $post)
 
                   <article class = "post">
                     <div class = "postTitle">
@@ -60,15 +71,13 @@
                     </div>
                     <p>{{$post->text}}</p>    
 
-                    <div class = "col-md-12">
+                    <div class = "interactions col-md-12">
 
                       <a href="#" class="like-button" id="{{$post->id}}">
                         <i class="far fa-thumbs-up mr-2" > like (19) </i>
                       </a>
-                     
-                     <a href="#">
-                       <i class="fas fa-share mr-2"> reply </i>
-                     </a>
+
+                      
 
                      <a href="{{url('/posts/' . $post->id . '/edit')}}">
                        <i class="fas fa-edit mr-2"> edit  </i>
@@ -78,49 +87,43 @@
                      </a>
 
                    </div>
-                   <article class = "reply">
+                   <div class = "replyBox col-md-12" style="padding:10px; margin-top: 13px; margin-bottom: 10px">
+
+                    <textarea class = "form-control" name = "reply-to-post" id = "reply-to-post" rows = 1 placeholder="Type your reply"></textarea>    
+                    <button type = "submit" class = "btn btn-primary  " style=" margin-top: 5px; margin-right:10px">Reply</button>
+                  </div>
+
+
+                  <article class = "reply">
                     <div class = "info">
                       Replied by: Faran on 19 May 2019 at 10:30
                     </div>
                     <p> Cattle them herb there bearing tree great had days man own divided after i, brought. Fish i blessed. Lesser moved.</p>
-                    <div class = "col-md-12">
+                    <div class = "interactions col-md-12">
 
                       <a href="#">
                         <i class="far fa-thumbs-up mr-2">like</i>
                         (<span>19</span>)
-                      </a>
-                      
-                     <a href="#">
-                       <i class="fas fa-share mr-2"> reply </i>
-                     </a>
+                      </a>  
+                </article>
+              </article>
+              @endforeach
+            </div>
 
-                     <a href="#">
-                       <i class="fas fa-edit mr-2"> edit  </i>
-                     </a>
-                     <a href="#">
-                       <i class="fas fa-trash-alt me-2"> delete </i>
-                     </a>
-                     
-                 </div>
-               </article>
-             </article>
-           @endforeach
-           </div>
-           
             {{ $posts->links() }}
-         </section>
-       </div>
-     </div>
-   </div>
- </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 </div>
 
 <script type="text/javascript">
   console.log('here')
-$('.like-button').click(function(e) {
-  e.preventDefault();
-  console.log($(this).attr('id'));
-});
+  $('.like-button').click(function(e) {
+    e.preventDefault();
+    console.log($(this).attr('id'));
+  });
 </script>
 @endsection
