@@ -14,7 +14,7 @@ background-size: cover;" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <title>{{ config('app.name', 'ConnectYou') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <!-- <script src="{{ asset('js/app.js') }}" defer></script> -->
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -27,6 +27,7 @@ background-size: cover;" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <link href="{{ asset('css/interaction.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bg.css') }}" rel="stylesheet">
     <link href="{{ asset('css/noti.css') }}" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 
     <link rel = "stylesheet" href = "{{ URL::to('src/css/db.css') }}">
