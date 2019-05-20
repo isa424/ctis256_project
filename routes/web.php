@@ -44,3 +44,5 @@ Route::get ('/userProfile/{id}', 'UserController@profile');
 
 Route::post('/posts', 'PostController@makePost');
 Route::get('/posts/{id}/delete', 'PostController@deletePost');
+Route::get('/posts/{id}/edit', 'PostController@editPost');
+Route::post('/posts/{id}/update', 'PostController@updatePost');

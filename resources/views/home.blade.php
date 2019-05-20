@@ -56,7 +56,7 @@
                       {{$post->title}}
                     </div>
                     <div class = "info">
-                      Posted by: {{$post->user->name}} on 19 May 2019 at 10:05
+                      Posted by: {{$post->user->name}} on {{$post->updated_at->diffForHumans()}}
                     </div>
                     <p>{{$post->text}}</p>    
 

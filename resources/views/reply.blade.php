@@ -6,7 +6,6 @@
     <div class="col-md-8">
       <div class="card-header">
 
-       <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
        <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
        <div class="container bootstrap snippet">
 

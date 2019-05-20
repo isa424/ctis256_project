@@ -6,7 +6,6 @@
         <div class="col-md-8">
             <div class="card">
               
-                     <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
                     <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
                     <div class="container bootstrap snippet">
 
@@ -18,7 +17,7 @@
                     </div>
 
                      <div class="jumbotron list-content">
-                        <form method="POST" action="{{ route('home') }}">
+                        <form method="POST" action="{{ url('/posts/' . $post->id . '/update') }}">
                         @csrf
 
                         <div class="form-group row" style = "padding-left: 20px; padding: auto;">
@@ -53,18 +52,18 @@
                             <header><h3>Edit Title</h3> </header>
                            
                                 <div class ="form-group">
-                                    <textarea class = "form-control" name = "Edit-post" id = "edit-post" rows = 2 ></textarea>
+                                    <textarea class = "form-control" name = "title" id = "edit-post" rows = 2>{{$post->title}}</textarea>
                                     
                             </div>
                     
-                        <div class = "col-md-12 col-md-offset-3">
+                        <div class = "">
                             <header><h3>Edit Post</h3> </header>
                             
                                 <div class ="form-group">
-                                    <textarea class = "form-control" name = "Edit-post" id = "edit-post" rows = 5 ></textarea>
+                                    <textarea class = "form-control" name = "text" id = "edit-post" rows = 5 >{{$post->text}}</textarea>
                                     
                             </div>
-                            <button name= "edit-btn" type = "submit" class = "btn btn-primary">Edit</button>
+                            <button name= "edit-btn" type = "submit" class = "btn btn-primary">Update</button>
                         </form>
                     </div>
                 </section>
