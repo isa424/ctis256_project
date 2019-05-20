@@ -35,73 +35,73 @@
 
 
 
-</ul>
+                        </ul>
 
-                            <div class="card-body bg-dark text-white">
-                                @if (session('status'))
-                                <div class="alert alert-success" role="alert">
-                                    {{ session('status') }}
-                                </div>
-                                @endif
+                        <div class="card-body bg-dark text-white">
+                            @if (session('status'))
+                            <div class="alert alert-success" role="alert">
+                                {{ session('status') }}
+                            </div>
+                            @endif
 
-                                <section class = "row posts">
-                                    <div class = "col-md-12 col-md-offset-3">
-                                        <header><h3>Your Posts </h3> </header>
+                            <section class = "row posts">
+                                <div class = "col-md-12 col-md-offset-3">
+                                    <header><h3>Posts by user </h3> </header>
 
 
-                                        @foreach($user->posts as $post)
+                                    @foreach($user->posts as $post)
 
-                                        <article class = "post">
-                                            <div class = "postTitle" href = "#">
-                                              {{$post->title}}
-                                          </div>
-                                          <p>{{$post->text}}</p>    
-
-                                          @if(auth()->id() == $user->id)
-                                          <div class = "col-md-12">
-
-                                             <a href="#">
-                                                 <i class="fas fa-edit mr-2"> edit  </i>
-                                             </a>
-                                             <a href="#">
-                                                 <i class="fas fa-trash-alt me-2"> delete </i>
-                                             </a>
-
-                                         </div>
-                                         @endif
-
-                                     </article>
-                                     @endforeach
-                                     <hr>
-                                     <header><h3>Your Comments</h3> </header>
-
-                                     @foreach($user->comments as $comment)
-
-                                     <article class = "reply">
+                                    <article class = "post">
                                         <div class = "postTitle" href = "#">
-                                          {{$comment->text}}
+                                          {{$post->title}}
                                       </div>
-                                      <div class = "info">
-                                        Replied by: Daniyal on 19 May 2019 at 10:05
-                                    </div>
-                                    <p> Cattle them herb there bearing tree great had days man own divided after i, brought. Fish i blessed. Lesser moved. Cattle them herb...</p>    
-                                    <div class = "col-md-12">
-                                 </div>
-                             </article>
-                             @endforeach
-                             <hr>
+                                      <p>{{$post->text}}</p>    
 
-                             <a href="{{ route('home') }}">    <button  class = "btn btn-primary">Return to Dashboard </button>
-                             </form>
+                                      @if(auth()->id() == $user->id)
+                                      <div class = "col-md-12">
 
-                         </li>
-                     </ul>
-                 </div>
-             </div>
-         </div>                                                                                
+                                       <a href="#">
+                                           <i class="fas fa-edit mr-2"> edit  </i>
+                                       </a>
+                                       <a href="#">
+                                           <i class="fas fa-trash-alt me-2"> delete </i>
+                                       </a>
 
-     </div>
- </div>
+                                   </div>
+                                   @endif
+
+                               </article>
+                               @endforeach
+                               <hr>
+                               <header><h3>Comments by user</h3> </header>
+
+                               @foreach($user->comments as $comment)
+
+                               <article class = "reply">
+                                <div class = "postTitle" href = "#">
+                                  {{$comment->text}}
+                              </div>
+                              <div class = "info">
+                                Replied by: Daniyal on 19 May 2019 at 10:05
+                            </div>
+                            <p> Cattle them herb there bearing tree great had days man own divided after i, brought. Fish i blessed. Lesser moved. Cattle them herb...</p>    
+                            <div class = "col-md-12">
+                            </div>
+                        </article>
+                        @endforeach
+                        <hr>
+
+                        <a href="{{ route('home') }}">    <button  class = "btn btn-primary">Return to Dashboard </button>
+                        </form>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>                                                                                
+
+</div>
+</div>
 </div>
 </div>
 </div>

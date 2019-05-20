@@ -47,17 +47,13 @@
               <hr>
               <section class = "row posts">
                 <div class = "col-md-12 col-md-offset-3">
-                  <header><h3>Posts from other people...</h3></header>
+                  <header><h3>Recent Posts...</h3></header>
                   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
                   <script>  
-                    $(document).ready(function(){  
-                      $(".replyIcon").click(function(){  
-                        $(".replyBox").fadeToggle("fast");  
-                      });  
-                      $(".replyIcon2").click(function(){  
-                        $(".replyBox2").fadeToggle("fast");  
-                      });  
-                    });  
+                    function myFunction(x) {
+                      x.classList.toggle("fa-thumbs-down");
+
+                    }
                   </script>  
 
                   @foreach($posts as $post)
@@ -72,53 +68,42 @@
                     <p>{{$post->text}}</p>    
 
                     <div class = "interactions col-md-12">
-
-
-
-                      
-
-<<<<<<< HEAD
                      <a  class="like-button" id="likeButton">
-                      <i onclick="myFunction(this)" class="far fa-thumbs-up">like</i>
-                      (<span class ="num">19</span>)
+                      <i onclick="myFunction(this)" class="far fa-thumbs-up mr-2" style = "font-size:15px"></i>
+                      
                     </a>
                     @if($post->user->id == auth()->id())
-=======
->>>>>>> parent of d239e54... like
-                     <a href="{{url('/posts/' . $post->id . '/edit')}}">
-                       <i class="fas fa-edit mr-2"> edit  </i>
-                     </a>
-                     <a href="{{url('/posts/' . $post->id . '/delete')}}">
-                       <i class="fas fa-trash-alt me-2"> delete </i>
-                     </a>
-<<<<<<< HEAD
-                     @endif()
 
-                    
-                    <!-- <textarea class = "form-control" name = "reply-to-post" id="comment-{{$post->id}}" rows = 1 placeholder="Type your reply"></textarea>     -->
-                    <input class = "form-control" name = "reply-to-post" id="comment-{{$post->id}}" rows = 1 placeholder="Type your reply"/>    
-                    <button type = "submit" class = "btn btn-primary make-comment" id="{{$post->id}}" style=" margin-top: 5px; margin-right:10px">Reply</button>
-=======
+                    <a href="{{url('/posts/' . $post->id . '/edit')}}">
+                     <i class="fas fa-edit mr-2"> edit  </i>
+                   </a>
+                   <a href="{{url('/posts/' . $post->id . '/delete')}}">
+                     <i class="fas fa-trash-alt me-2"> delete </i>
+                   </a>
 
-                   </div>
-                   <div class = "replyBox col-md-12" style="padding:10px; margin-top: 13px; margin-bottom: 10px">
-
-                    <textarea class = "form-control" name = "reply-to-post" id = "reply-to-post" rows = 1 placeholder="Type your reply"></textarea>    
-                    <button type = "submit" class = "btn btn-primary  " style=" margin-top: 5px; margin-right:10px">Reply</button>
->>>>>>> parent of d239e54... like
-                  </div>
+                   @endif()
 
 
-<<<<<<< HEAD
+                   <!-- <textarea class = "form-control" name = "reply-to-post" id="comment-{{$post->id}}" rows = 1 placeholder="Type your reply"></textarea>     -->
+                   <input class = "form-control" name = "reply-to-post" id="comment-{{$post->id}}" rows = 1 placeholder="Type your reply"/>    
+                   <button type = "submit" class = "btn btn-primary make-comment" id="{{$post->id}}" style=" margin-top: 5px; margin-right:10px">Reply</button>
+
+
+                 </div>
+                 <div class = "replyBox col-md-12" style="padding:10px; margin-top: 13px; margin-bottom: 10px">
+
+
+
+
                   @foreach($post->comments as $comment)
                   <article class = "reply" id="reply-{{$comment->id}}">
                     <div class = "info">
                       Replied by: {{$comment->user->name}} on {{$comment->updated_at->diffForHumans()}}
                     </div>
                     <p>{{$comment->text}}</p>
-                </article>
-                @endforeach
-=======
+                  </article>
+                  @endforeach
+
                   <article class = "reply">
                     <div class = "info">
                       Replied by: Faran on 19 May 2019 at 10:30
@@ -126,27 +111,23 @@
                     <p> Cattle them herb there bearing tree great had days man own divided after i, brought. Fish i blessed. Lesser moved.</p>
                     <div class = "interactions col-md-12">
 
-                      <a href="#" class="likeIt">
-                        <i class="far fa-thumbs-up mr-2">like</i>
-                        (<span>19</span>)
-                      </a>  
-                </article>
->>>>>>> parent of d239e54... like
-              </article>
-              @endforeach
-            </div>
+                      
+                    </article>
+                  </article>
+                  @endforeach
+                </div>
 
-            {{ $posts->links() }}
-          </section>
+                {{ $posts->links() }}
+              </section>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-</div>
 
-<script type="text/javascript">
-  console.log('here')
+  <script type="text/javascript">
+    console.log('here')
 
-</script>
-@endsection
+  </script>
+  @endsection
