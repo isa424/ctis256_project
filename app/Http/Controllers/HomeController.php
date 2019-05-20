@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Post;
+use App\{Post, User};
 
 class HomeController extends Controller
 {
@@ -27,8 +27,30 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $posts = Post::with('comments')->get();
+        $posts = Post::with('comments')->simplePaginate(10);
+        $notifications = \DB::table('notifications')->where('notifiable_id', auth()->id())->whereNull('read_at')->get();
+        $friendIds = $notifications->pluck('data')->map(function($data) {
+            return ((array) json_decode($data))['friend_id'];
+        })->toArray();
 
-        return view('home');
+        $friends = User::whereIn('id', $friendIds)->get();
+        $notifications = $notifications->map(function($notification) use ($friends) {
+            $friendId = ((array) json_decode($notification->data))['friend_id'];
+            $friend = $friends->first(function($user) use ($friendId) {
+                return $friendId == $user->id;
+            });
+
+            if ($friend) {
+                $notification->friend = $friend;
+            }
+
+            return $notification;
+        });
+
+        $unreadCount = $notifications->filter(function($n) {
+            return !$n->read_at;
+        })->count();
+
+        return view('home', ['posts' => $posts, 'notifications' => $notifications, 'unread_count' => $unreadCount]);
     }
 }

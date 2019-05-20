@@ -12,8 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('/home');
 });
+Route::get('/friends/accept/{id}', 'UserController@acceptFriendRequest');
+Route::get('/friends/remove/{id}', 'UserController@removeFriend');
 
 Auth::routes();
 
@@ -26,13 +28,9 @@ Route::get ('/friends', function () {
 	return view('friends');
 });
 
-Route::get ('/friendslist', function () {
-	return view('friendslist');
-});
+Route::get ('/friendslist', 'UserController@friendslist');
 
-Route::get ('/search', function () {
-	return view('search');
-});
+Route::get('/search', 'UserController@search');
 
 Route::get ('/edit', function () {
 	return view('edit');
@@ -42,6 +40,7 @@ Route::get ('/reply', function () {
 	return view('reply');
 });
 
-Route::get ('/userProfile', function () {
-	return view('userProfile');
-});
+Route::get ('/userProfile/{id}', 'UserController@profile');
+
+Route::post('/posts', 'PostController@makePost');
+Route::get('/posts/{id}/delete', 'PostController@deletePost');

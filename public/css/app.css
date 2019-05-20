@@ -1,6 +1,22 @@
 
 @import url(https://fonts.googleapis.com/css?family=Nunito);
 
+.interactions:hover{
+       color:##007399; 
+}
+.interactions {
+    color:#008BBB
+;
+}
+.interactions{
+       cursor: pointer;
+       
+}
+.replyBox {
+    display:inline-block;
+}
+
+
 #navbar-toggle collapsed{
     background:#aaaa;
 

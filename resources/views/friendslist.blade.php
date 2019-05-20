@@ -20,20 +20,19 @@
             </div>
             <div class="jumbotron list-content">
               <ul class="list-group">
-               @php ($ali=1)
                <li href="#" class="list-group-item title">
-                You are friends with: 8 people
+                You are friends with: {{count($friends)}} people
               </li>
-              @for ($i = 0; $i <8; $i++)
+              @foreach($friends as $friend)
               <li href="#" class="list-group-item text-left bg-dark">
-                <a href = "#" title = "Open this profile">
+                <a href="{{url('userProfile/' . $friend->id)}}" title = "Open this profile">
                   <img class="img-thumbnail"  src="images/friend_icons/friend-1.png">
                 <label class="name">
-                Daniyal Admaney                    
+                {{$friend->name}}
               </label>
             </a>
                 <label class="pull-right">                     
-                  <a  href="#" title="Delete this friend">
+                  <a  href="{{url('/friends/remove/' . $friend->id)}}" title="Delete this friend">
                     <i class="fas fa-trash-alt" style = "color:#FF1717; font-size: 20px;">
 
                     </i>
@@ -42,14 +41,7 @@
 
                 </label>
               </li>
-              @endfor
-
-              <li href="#" class="list-group-item text-left text-white">
-                <a class="btn btn-block btn-primary">
-                  <i class="glyphicon glyphicon-refresh"></i>
-                  Load more...
-                </a>
-              </li>
+              @endforeach
             </ul>
           </div>
         </div>
