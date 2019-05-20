@@ -42,3 +42,6 @@ Route::get ('/reply', function () {
 	return view('reply');
 });
 
+Route::get ('/userProfile', function () {
+	return view('userProfile');
+});

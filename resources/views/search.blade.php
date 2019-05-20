@@ -48,7 +48,7 @@
 
 
           <ul class="list-group">
-           @php ($ali=1)
+       
            <li href="#" class="list-group-item title">
             Your search yielded 3 results
           </li>

@@ -62,11 +62,11 @@ background-size: cover;" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
                         
                         @else
                         <li class="nav-item dropdown col-md-12" style = "text-align: center; display:inline-block;">
-                           <a style = "font-size:80%; color: red">unread:3</a>
-                           <a id="navbarDropdown" style ="font-size:200% ;display:inline-block;" class="nav-link dropdown-toggle fas fa-envelope" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre> 
+                         <a style = "font-size:80%; color: red">unread:3</a>
+                         <a id="navbarDropdown" style ="font-size:200% ;display:inline-block;" class="nav-link dropdown-toggle fas fa-envelope" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre> 
 
-                           </a>
-                           <ul class="dropdown-menu notify-drop col-md-12"> 
+                         </a>
+                         <ul class="dropdown-menu notify-drop col-md-12"> 
                             <div class="notify-drop-title">
                                 <div class="row">
 
@@ -143,25 +143,28 @@ background-size: cover;" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
                   >
                   {{ __('Search People') }}
               </a>
-
-
-
-
-
-              <a class="dropdown-item" href="{{ route('logout') }}"
-              onclick="event.preventDefault();
-              document.getElementById('logout-form').submit();">
-              {{ __('Logout') }}
+              <a class="dropdown-item" href="userProfile"
+              >
+              {{ __('My Profile') }}
           </a>
 
 
-          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-            @csrf
-        </form>
+
+
+          <a class="dropdown-item" href="{{ route('logout') }}"
+          onclick="event.preventDefault();
+          document.getElementById('logout-form').submit();">
+          {{ __('Logout') }}
+      </a>
+
+
+      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+        @csrf
+    </form>
 
 
 
-    </div>
+</div>
 </li>
 @endguest
 </ul>
