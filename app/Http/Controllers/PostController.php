@@ -20,7 +20,7 @@ class PostController extends Controller
         $user = auth()->user();
         $user->posts()->save($post);
 
-        return view('home', $post);
+        return redirect('/home');
     }
 
     public function editPost(Request $request) {
