@@ -64,9 +64,11 @@
                     <div class = "col-md-12">
 
                       <a href="#" class="like-button" id="{{$i}}">
-                        <i class="far fa-thumbs-up mr-2" > like (19) </i>
+                        <i class="far fa-thumbs-up mr-2" >like</i>
+                        (<span class ="num">19</span>)
                       </a>
-                     
+                    
+                      
                      <a href="#">
                        <i class="fas fa-share mr-2"> reply </i>
                      </a>
@@ -86,7 +88,7 @@
                     <p> Cattle them herb there bearing tree great had days man own divided after i, brought. Fish i blessed. Lesser moved.</p>
                     <div class = "col-md-12">
 
-                      <a href="#">
+                      <a href="#" class="likeIt">
                         <i class="far fa-thumbs-up mr-2">like</i>
                         (<span>19</span>)
                       </a>
@@ -120,6 +122,74 @@
 $('.like-button').click(function(e) {
   e.preventDefault();
   console.log($(this).attr('id'));
+  console.log($(this).attr('class'));
+
+
+ if ($(this).find('i').text().trim()=='like'){
+  $(this).find('i').removeClass('fa-thumbs-up ');
+ // $(this).removeClass('like-button');
+  $(this).find('i').addClass(' fas fa-thumbs-down mr-2');
+  $(this).find('i').text('unlike');
+ 
+  $(this).find('span').html(parseInt($(this).find('span').html(), 10)+1);
+
+}
+
+
+});
+
+$('.like-button').click(function(e) {
+  e.preventDefault();
+  console.log($(this).attr('id'));
+  console.log($(this).attr('class'));
+
+
+ if ($(this).find('i').text().trim()=='like'){
+  $(this).find('i').removeClass('fa-thumbs-up ');
+ // $(this).removeClass('like-button');
+  $(this).find('i').addClass(' fas fa-thumbs-down mr-2');
+  $(this).find('i').text('unlike');
+ 
+  $(this).find('span').html(parseInt($(this).find('span').html(), 10)+1);
+
+}
+
+
+});
+$('.likeIt').click(function(e) {
+  e.preventDefault();
+  console.log($(this).attr('id'));
+  console.log($(this).attr('class'));
+
+//  //  if ($(this).find('i').text().trim()=='unlike'){
+//  //  $(this).find('i').removeClass('fa-thumbs-down ');
+//  // // $(this).removeClass('like-button');
+//  //  $(this).find('i').addClass('fa-thumbs-up');
+//  //  $(this).find('i').text('like');
+//  //  $(this).find('span').text('like');
+// }
+ if ($(this).find('i').text().trim()=='like'){
+  $(this).find('i').removeClass('fa-thumbs-up ');
+ // $(this).removeClass('like-button');
+  $(this).find('i').addClass(' fas fa-thumbs-down mr-2');
+  $(this).find('i').text('unlike');
+ 
+  $(this).find('span').html(parseInt($(this).find('span').html(), 10)+1);
+  $('unlike-button').find('span').html(parseInt($(this).find('span').html(), 10)-1);
+
+}
+
+
+
+// if ($(this).class='fas fa-thumbs-down mr-2') {
+//   $(this).removeClass('fas fa-thumbs-down mr-2');
+
+  
+// $(this).addClass('far fa-thumbs-up mr-2');
+// }
+
+ // $(this).attr('class', '');}
+ // $(this).attr('class', 'fas fa-thumbs-down mr-2');
 });
 </script>
 @endsection
