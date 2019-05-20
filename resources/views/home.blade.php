@@ -64,12 +64,10 @@
 
                     <div class = "col-md-12">
 
-                      <a href="#">
-                        <i class="far fa-thumbs-up mr-2"> like (19) </i>
+                      <a href="#" class="like-button" id="{{$i}}">
+                        <i class="far fa-thumbs-up mr-2" > like (19) </i>
                       </a>
-                      <a href="#">
-                       <i class="far fa-thumbs-down mr-2"> dislike (2) </i>
-                     </a>
+                     
                      <a href="#">
                        <i class="fas fa-share mr-2"> reply </i>
                      </a>
@@ -90,11 +88,10 @@
                     <div class = "col-md-12">
 
                       <a href="#">
-                        <i class="far fa-thumbs-up mr-2"> like (19) </i>
+                        <i class="far fa-thumbs-up mr-2">like</i>
+                        (<span>19</span>)
                       </a>
-                      <a href="#">
-                       <i class="far fa-thumbs-down mr-2"> dislike (2) </i>
-                     </a>
+                      
                      <a href="#">
                        <i class="fas fa-share mr-2"> reply </i>
                      </a>
@@ -118,4 +115,12 @@
  </div>
 </div>
 </div>
+
+<script type="text/javascript">
+  console.log('here')
+$('.like-button').click(function(e) {
+  e.preventDefault();
+  console.log($(this).attr('id'));
+});
+</script>
 @endsection
