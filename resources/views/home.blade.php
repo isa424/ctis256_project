@@ -18,26 +18,7 @@
             </div>
 
             <div class="jumbotron list-content">
-                            <form method="POST" action="{{ route('login') }}">
-                                @csrf
-
-                                <div class="form-group row" style = "padding-left: 20px">
-                                    <button type="submit" class="btn btn-primary" label for="search" class="col-md-4 col-form-label text-md-right right">{{ __('Search Friend 🔍') }}</label>
-
-                                        <div class="col-md-12">
-                                            <input id="search" type="search" class="form-control @error('search') is-invalid @enderror" name="search" value="{{ old('email') }}" required autocomplete="search">
-
-                                            @error('email')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        </div>
-                                    </button>
-                                    @enderror
-                                </div>
-                            </div>
-                        </form>
-                    
+                           
                     
                        
 
@@ -54,23 +35,9 @@
                         <header><h3>Create New Post</h3> </header>
                         <form action = "">
                             <div class ="form-group">
-                                <textarea class = "form-control" name = "post-title" id = "post-title" rows = 1 placeholder="Post Title"></textarea>
+                                <textarea class = "form-control" name = "post-title" id = "post-title" rows = 1 placeholder="Post Title" required></textarea>
                                 <br>
-                                <textarea class = "form-control" name = "new-post" id = "new-post" rows = 5 placeholder="What's on your mind?"></textarea>
-                                
-
-                                <div class = "col-md-9 col-md-offset-3">
-                                    <label for="postPic" class=" col-form-label text-md-right">{{ __('Upload Image') }}</label>
-                                    <input id="postPic" type = "file" name = "post_pic" class="form-control @error('Post Picture') is-invalid @enderror" name="postPic" value="{{ old('postPic') }}" autocomplete="postPic"> 
-
-
-                                    @error('postPic')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                    @enderror
-                                </div>
-                            </div>
+                                <textarea class = "form-control" name = "new-post" id = "new-post" rows = 5 placeholder="What's on your mind?" required></textarea>
                             <button type = "submit" class = "btn btn-primary">New Post</button>
                         </form>
                     </div>

@@ -26,12 +26,15 @@
               </li>
               @for ($i = 0; $i <8; $i++)
               <li href="#" class="list-group-item text-left bg-dark">
-                <img class="img-thumbnail"  src="images/friend_icons/friend-1.png">
+                <a href = "#" title = "Open this profile">
+                  <img class="img-thumbnail"  src="images/friend_icons/friend-1.png">
                 <label class="name">
-                Daniyal Admaney                    </label>
+                Daniyal Admaney                    
+              </label>
+            </a>
                 <label class="pull-right">                     
-                  <a  href="#" title="Delete">
-                    <i class="fas fa-trash-alt" style = "color:red; font-size: 20px;">
+                  <a  href="#" title="Delete this friend">
+                    <i class="fas fa-trash-alt" style = "color:#FF1717; font-size: 20px;">
 
                     </i>
                     <!-- <img src = "images/delete.png" style="width:50px;height:50px;" > -->

@@ -5,7 +5,7 @@
   <div class="row justify-content-center">
     <div class="col-md-8">
       <div class="card">
-       
+
         <div class="card-body">
 
           <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
@@ -15,116 +15,71 @@
             <div class="header">
               <h3 class="text-muted prj-name">
                 <span class="fa fa-users fa-2x principal-title"></span>
-                Friends List
+                Search for friends
               </h3>
             </div>
-
-
             <div class="jumbotron list-content">
-              <ul class="list-group">
-                <li href="#" class="list-group-item title">
-                  You are friends with: 8 people
-                </li>
-                <li href="#" class="list-group-item text-left bg-dark">
-                  <img class="img-thumbnail" src="images/friend_icons/friend-1.png">
-                  <label class="name">
-                    Daniyal Admaney<br>
-                  </label>
+              <div class = "searchContainer" style = "text-align: center;">
+              <div class = "searchButton" style="display: inline-block;">
+               <form method="POST" action="{{ route('login') }}">
+                @csrf
 
-                  <label class="pull-right">                     
-                    <a  href="#" title="Delete"><img src = "images/delete.png" style="width:50px;height:50px;"  ></a>
-                    
-                  </label>
-                  <div class="break"></div>
-                </li>
-                <li href="#" class="list-group-item text-left bg-dark">
-                  <img class="img-thumbnail"  src="images/friend_icons/friend-2.png">
-                  <label class="name">
-                  Daniyal Admaney                          </label>
+                <div class="form-group row" style = "padding-left: 20px">
+                  <button type="submit" class="btn btn-primary" label for="search" class="col-md-4 col-form-label text-md-right right">{{ __('Search Friend 🔍') }}</label>
 
-                  <label class="pull-right">                     
-                    <a  href="#" title="Delete"><img src = "images/delete.png" style="width:50px;height:50px;" ></a>
-                    
-                  </label>
-                  <div class="break"></div>
-                </li>
-                <li href="#" class="list-group-item text-left bg-dark">
-                  <img class="img-thumbnail"  src="images/friend_icons/friend-3.png">
-                  <label class="name">
-                  Daniyal Admaney                    </label>
-                  <label class="pull-right">                     
-                    <a  href="#" title="Delete">
-                      <i class="fas fa-trash-alt"></i>
-                      <!-- <img src = "images/delete.png" style="width:50px;height:50px;" > -->
-                    </a>
-                    
-                  </label>
-                  <div class="break"></div>
-                </li>
-                <li href="#" class="list-group-item text-left bg-dark">
-                  <img class="img-thumbnail"  src="images/friend_icons/friend-4.png">
-                  <label class="name">
-                  Daniyal Admaney                    </label>
-                  <label class="pull-right">                     
-                    <a  href="#" title="Delete"><img src = "images/delete.png" style="width:50px;height:50px;" ></a>
-                    
-                  </label>
-                  <div class="break"></div>
-                </li>
-                <li href="#" class="list-group-item text-left bg-dark">
-                  <img class="img-thumbnail"  src="images/friend_icons/friend-5.png">
-                  <label class="name">
-                  Daniyal Admaney                    </label>
-                  <label class="pull-right">                     
-                    <a  href="#" title="Delete"><img src = "images/delete.png" style="width:50px;height:50px;"width = 10px height = 10px    ></a>
-                    
-                  </label>
-                  <div class="break"></div>
-                </li>
-                <li href="#" class="list-group-item text-left bg-dark">
-                  <img class="img-thumbnail"  src="images/friend_icons/friend-6.png">
-                  <label class="name">
-                  Daniyal Admaney                    </label>
-                  <label class="pull-right">                     
-                    <a  href="#" title="Delete"><img src = "images/delete.png" style="width:50px;height:50px;"width = 10px height = 10px    ></a>
-                    
-                  </label>
-                  <div class="break"></div>
-                </li>
-                <li href="#" class="list-group-item text-left bg-dark">
-                  <img class="img-thumbnail"  src="images/friend_icons/friend-7.png">
-                  <label class="name">
-                  Daniyal Admaney                    </label>
-                  <label class="pull-right">                     
-                    <a  href="#" title="Delete"><img src = "images/delete.png" style="width:50px;height:50px;"width = 10px height = 10px    ></a>
-                    
-                  </label>
-                  <div class="break"></div>
-                </li>
-                <li href="#" class="list-group-item text-left bg-dark">
-                  <img class="img-thumbnail"  src="images/friend_icons/friend-8.png">
-                  <label class="name">
-                   Daniyal Admaney
-                 </label>
-                 <label class="pull-right">                     
-                  <a  href="#" title="Delete"><img src = "images/delete.png" style="width:50px;height:50px;" ></a>
-                  
-                </label>
-                <div class="break"></div>
-              </li>
-              <li href="#" class="list-group-item text-left text-white">
-                <a class="btn btn-block btn-primary">
-                  <i class="glyphicon glyphicon-refresh"></i>
-                  Load more...
-                </a>
-              </li>
-            </ul>
+                    <div class="col-md-12">
+                      <input id="search" type="search" class="form-control @error('search') is-invalid @enderror" name="search" value="{{ old('search') }}" required autocomplete="search">
+
+                      @error('search')
+                      <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                      </span>
+                    </div>
+                  </button>
+                  @enderror
+                </div>
+              </div>
+            </form>
           </div>
         </div>
-      </div>                                                                                
 
+
+
+
+
+          <ul class="list-group">
+           @php ($ali=1)
+           <li href="#" class="list-group-item title">
+            Your search yielded 3 results
+          </li>
+          @for ($i = 0; $i <3; $i++)
+          <li href="#" class="list-group-item text-left bg-dark">
+            <a href = "#" title = "Open this profile">
+              <img class="img-thumbnail"  src="images/friend_icons/friend-1.png">
+              <label class="name">
+                Daniyal Admaney                    
+              </label>
+            </a>
+            <label class="pull-right">                     
+              <a  href="#" title="Add Friend">
+                <i class="fas fa-user-plus" style = "color:#56FF42; font-size: 20px;">
+
+                </i>
+                <!-- <img src = "images/delete.png" style="width:50px;height:50px;" > -->
+              </a>
+
+            </label>
+          </li>
+          @endfor
+
+
+        </ul>
+      </div>
     </div>
-  </div>
+  </div>                                                                                
+
+</div>
+</div>
 </div>
 </div>
 </div>
