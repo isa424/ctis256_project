@@ -20,6 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::post('/posts/like', 'PostController@likePost');
 Route::post('/posts/unlike', 'PostController@unlikePost');
 Route::post('/friends/send', 'UserController@sendFriendRequest');
+Route::post('/comments', 'CommentController@makeComment');
 
 Route::group(['middleware' => 'auth'], function() {
     // Users
